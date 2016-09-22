@@ -17,7 +17,8 @@ import { AppState, InteralStateType } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
-import {New} from "./pages/new/new.component";
+import { New } from "./pages/new/new.component";
+import {Lead} from "./pages/lead/lead.component";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -37,7 +38,7 @@ type StoreType = {
 @NgModule({
   bootstrap: [App],
   declarations: [
-    App, New
+    App, New, Lead
   ],
   imports: [ // import Angular's modules
     BrowserModule,

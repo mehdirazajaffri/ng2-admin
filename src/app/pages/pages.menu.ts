@@ -25,9 +25,19 @@ export const PAGES_MENU = [
             order: 100
           }
         },
+        children: [
+          {
+            path: 'mehdi',
+            data: {
+              menu: {
+                title: 'Open Reviews',
+              }
+            }
+          }
+        ]
       },
       {
-        path: '',
+        path: 'new',
         data: {
           menu: {
             title: 'Bookings',
@@ -38,7 +48,7 @@ export const PAGES_MENU = [
         },
       },
       {
-        path: '',
+        path: 'leads',
         data: {
           menu: {
             title: 'Leads',
@@ -49,7 +59,7 @@ export const PAGES_MENU = [
         },
       },
       {
-        path: 'new',
+        path: 'myleads',
         data: {
           menu: {
             title: 'My Leads',

@@ -15,6 +15,7 @@ export class BaContentTop {
     this._state.subscribe('menu.activeLink', (activeLink) => {
       if (activeLink) {
         this.activePageTitle = activeLink.title;
+        console.log(activeLink.title);
       }
     });
   }

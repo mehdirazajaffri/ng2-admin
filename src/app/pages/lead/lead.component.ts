@@ -6,11 +6,10 @@ import {Route} from "@angular/router";
   pipes: [],
   providers: [],
   styles: [],
-  template: require('./new.html')
+  template: ''
 })
-export class New {
+export class Lead {
 
   constructor() {
-  console.log('ali faizan');
-}
+  }
 }
