@@ -1,5 +1,7 @@
 import { Routes, RouterModule }  from '@angular/router';
 import { Pages } from './pages.component';
+import { New } from './new/new.component';
+
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   {
@@ -24,7 +26,26 @@ const routes: Routes = [
       { path: 'tables', loadChildren: () => System.import('./tables/tables.module') },
       { path: 'maps', loadChildren: () => System.import('./maps/maps.module') }
     ]
-  }
+  },
+  {
+    path: 'pages',
+    component: Pages,
+    children: [
+      {
+        path: 'new',  // path for our page
+        component: New, // component imported above
+        data: { // custom menu declaration
+          menu: {
+            title: 'New Page', // menu title
+            icon: 'ion-android-home', // menu icon
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
+      },
+    ]
+  },
 ];
 
 export const routing = RouterModule.forChild(routes);

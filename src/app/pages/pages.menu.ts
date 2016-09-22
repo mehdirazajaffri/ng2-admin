@@ -6,7 +6,7 @@ export const PAGES_MENU = [
         path: 'dashboard',
         data: {
           menu: {
-            title: 'Dashboard',
+            title: 'Reporting',
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
@@ -18,55 +18,57 @@ export const PAGES_MENU = [
         path: 'editors',
         data: {
           menu: {
-            title: 'Editors',
+            title: 'Review',
             icon: 'ion-edit',
             selected: false,
             expanded: false,
-            order: 100,
+            order: 100
           }
         },
-        children: [
-          {
-            path: 'ckeditor',
-            data: {
-              menu: {
-                title: 'CKEditor',
-              }
-            }
-          }
-        ]
       },
-      //{
-      //  path: 'components',
-      //  data: {
-      //    menu: {
-      //      title: 'Components',
-      //      icon: 'ion-gear-a',
-      //      selected: false,
-      //      expanded: false,
-      //      order: 250,
-      //    }
-      //  },
-      //  children: [
-      //    {
-      //      path: 'treeview',
-      //      data: {
-      //        menu: {
-      //          title: 'Tree View',
-      //        }
-      //      }
-      //    }
-      //  ]
-      //},
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'Bookings',
+            icon: 'ion-edit',
+            selected: false,
+            expanded: false
+          }
+        },
+      },
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'Leads',
+            icon: 'ion-edit',
+            selected: false,
+            expanded: false
+          }
+        },
+      },
+      {
+        path: 'new',
+        data: {
+          menu: {
+            title: 'My Leads',
+            icon: 'ion-edit',
+            selected: false,
+            expanded: false,
+            order: 100
+          }
+        },
+      },
       {
         path: 'charts',
         data: {
           menu: {
-            title: 'Charts',
+            title: 'Service Providers',
             icon: 'ion-stats-bars',
             selected: false,
             expanded: false,
-            order: 200,
+            order: 200
           }
         },
         children: [
@@ -74,21 +76,101 @@ export const PAGES_MENU = [
             path: 'chartist-js',
             data: {
               menu: {
-                title: 'Chartist.Js',
+                title: 'View Service Providers',
               }
             }
+          },
+          {
+            path: '',
+            data: {
+              menu: {
+                title: 'Add Service Provider',
+              }
+            }
+          },
+        ]
+      },
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'Advertising',
+            icon: 'ion-ios-more',
+            selected: false,
+            expanded: false,
+            order: 700
           }
+        },
+        children: [
+          {
+            path: '',
+            data: {
+              menu: {
+                title: 'Paid Advertising',
+                url: '#'
+              }
+            },
+            children: [
+              {
+                path: '',
+                data: {
+                  menu: {
+                    title: 'Featured Top Positions',
+                    url: '#'
+                  }
+                }
+              },
+              {
+                path: '',
+                data: {
+                  menu: {
+                    title: 'Featured Providers',
+                    url: '#'
+                  }
+                }
+              }
+            ]
+          },
+          {
+            path: '',
+            data: {
+              menu: {
+                title: 'Deals and Promotion',
+                url: '#'
+              }
+            },
+            children: [
+              {
+                path: '',
+                data: {
+                  menu: {
+                    title: 'Listing Promotion',
+                    url: '#'
+                  }
+                }
+              },
+              {
+                path: '',
+                data: {
+                  menu: {
+                    title: 'Check out page promotion',
+                    url: '#'
+                  }
+                }
+              }
+            ]
+          },
         ]
       },
       {
         path: 'ui',
         data: {
           menu: {
-            title: 'UI Features',
+            title: 'Custom Services',
             icon: 'ion-android-laptop',
             selected: false,
             expanded: false,
-            order: 300,
+            order: 300
           }
         },
         children: [
@@ -96,45 +178,21 @@ export const PAGES_MENU = [
             path: 'typography',
             data: {
               menu: {
-                title: 'Typography',
+                title: 'List',
               }
             }
-          },
-          {
-            path: 'buttons',
-            data: {
-              menu: {
-                title: 'Buttons',
-              }
-            }
-          },
-          {
-            path: 'icons',
-            data: {
-              menu: {
-                title: 'Icons',
-              }
-            }
-          },
-          {
-            path: 'grid',
-            data: {
-              menu: {
-                title: 'Grid',
-              }
-            }
-          },
+          }
         ]
       },
       {
         path: 'forms',
         data: {
           menu: {
-            title: 'Form Elements',
+            title: 'Front-End Control',
             icon: 'ion-compose',
             selected: false,
             expanded: false,
-            order: 400,
+            order: 400
           }
         },
         children: [
@@ -142,7 +200,7 @@ export const PAGES_MENU = [
             path: 'inputs',
             data: {
               menu: {
-                title: 'Form Inputs',
+                title: 'Search Suggestions',
               }
             }
           },
@@ -150,7 +208,15 @@ export const PAGES_MENU = [
             path: 'layouts',
             data: {
               menu: {
-                title: 'Form Layouts',
+                title: 'Search bar prototype',
+              }
+            }
+          },
+          {
+            path: '',
+            data: {
+              menu: {
+                title: 'Popular Services',
               }
             }
           }
@@ -160,11 +226,11 @@ export const PAGES_MENU = [
         path: 'tables',
         data: {
           menu: {
-            title: 'Tables',
+            title: 'Inbox',
             icon: 'ion-grid',
             selected: false,
             expanded: false,
-            order: 500,
+            order: 500
           }
         },
         children: [
@@ -172,7 +238,7 @@ export const PAGES_MENU = [
             path: 'basictables',
             data: {
               menu: {
-                title: 'Basic Tables',
+                title: 'Contact us',
               }
             }
           },
@@ -180,53 +246,7 @@ export const PAGES_MENU = [
             path: 'smarttables',
             data: {
               menu: {
-                title: 'Smart Tables',
-              }
-            }
-          }
-        ]
-      },
-      {
-        path: 'maps',
-        data: {
-          menu: {
-            title: 'Maps',
-            icon: 'ion-ios-location-outline',
-            selected: false,
-            expanded: false,
-            order: 600,
-          }
-        },
-        children: [
-          {
-            path: 'googlemaps',
-            data: {
-              menu: {
-                title: 'Google Maps',
-              }
-            }
-          },
-          {
-            path: 'leafletmaps',
-            data: {
-              menu: {
-                title: 'Leaflet Maps',
-              }
-            }
-          },
-          {
-            path: 'bubblemaps',
-            data: {
-              menu: {
-                title: 'Bubble Maps',
-              }
-            }
-          },
-          {
-            path: 'linemaps',
-            data: {
-              menu: {
-                title: 'Line Maps',
+                title: 'Become a partner',
               }
             }
           }
@@ -236,43 +256,11 @@ export const PAGES_MENU = [
         path: '',
         data: {
           menu: {
-            title: 'Pages',
-            icon: 'ion-document',
-            selected: false,
-            expanded: false,
-            order: 650,
-          }
-        },
-        children: [
-          {
-            path: '',
-            data: {
-              menu: {
-                title: 'Login',
-                url: '#/login'
-              }
-            }
-          },
-          {
-            path: '',
-            data: {
-              menu: {
-                title: 'Register',
-                url: '#/register'
-              }
-            }
-          }
-        ]
-      },
-      {
-        path: '',
-        data: {
-          menu: {
-            title: 'Menu Level 1',
+            title: 'Admin',
             icon: 'ion-ios-more',
             selected: false,
             expanded: false,
-            order: 700,
+            order: 700
           }
         },
         children: [
@@ -280,16 +268,7 @@ export const PAGES_MENU = [
             path: '',
             data: {
               menu: {
-                title: 'Menu Level 1.1',
-                url: '#'
-              }
-            }
-          },
-          {
-            path: '',
-            data: {
-              menu: {
-                title: 'Menu Level 1.2',
+                title: 'Movesouq Login Management',
                 url: '#'
               }
             },
@@ -298,26 +277,82 @@ export const PAGES_MENU = [
                 path: '',
                 data: {
                   menu: {
-                    title: 'Menu Level 1.2.1',
+                    title: 'User',
+                    url: '#'
+                  }
+                }
+              },
+              {
+                path: '',
+                data: {
+                  menu: {
+                    title: 'Add new user',
                     url: '#'
                   }
                 }
               }
             ]
-          }
+          },
+          {
+            path: '',
+            data: {
+              menu: {
+                title: 'Supplier Login Management',
+                url: '#'
+              }
+            },
+            children: [
+              {
+                path: '',
+                data: {
+                  menu: {
+                    title: 'User',
+                    url: '#'
+                  }
+                }
+              },
+              {
+                path: '',
+                data: {
+                  menu: {
+                    title: 'Add new user',
+                    url: '#'
+                  }
+                }
+              }
+            ]
+          },
         ]
       },
       {
-        path: '',
+        path: 'maps',
         data: {
           menu: {
-            title: 'External Link',
-            url: 'http://akveo.com',
-            icon: 'ion-android-exit',
-            order: 800,
-            target: '_blank'
+            title: 'Manage Credit',
+            icon: 'ion-ios-location-outline',
+            selected: false,
+            expanded: false,
+            order: 600
           }
-        }
+        },
+        children: [
+          {
+            path: 'googlemaps',
+            data: {
+              menu: {
+                title: 'Add Credit',
+              }
+            }
+          },
+          {
+            path: 'leafletmaps',
+            data: {
+              menu: {
+                title: 'Account Details',
+              }
+            }
+          },
+        ]
       }
     ]
   }
